@@ -50,3 +50,51 @@ startGame.addEventListener("click", (event) => {
     }
 });
 
+function play() {
+    win = false;
+    order = [];
+    player = [];
+    flash = 0;
+    intervalId = 0;
+    turn = 1;
+    counter.innerHTML = 1;
+    correct = true;
+    
+    for (var i = 0; i < 20; i++) {
+        order.push(Math.floor(Math.random() *4) +1);
+    }
+    console.log(order); // for loop array for the game
+    cpu = true;
+    
+    intervalId = setInterval(gameTurn, 800);
+}
+
+function gameTurn() {
+    on = false;
+    
+    if (flash == turn) {
+        clearInterval(intervalId);
+        cpu = false;
+        clearColor();
+        on = true;
+    }
+    if (cpu) {
+        clearColor();
+        setTimeout(() => {
+            if (order[flash] == 1) one();
+            if (order[flash] == 2) two();
+            if (order[flash] == 3) three();
+            if (order[flash] == 4) four();
+            flash++;
+        }, 200);
+    }
+}
+
+function one() {
+    if (noise) {
+        let audio = document.getElementById("audio1");
+        audio.play();
+    }
+    noise = true;
+    topL.style.backgroundColor = "darkgreen";
+}
