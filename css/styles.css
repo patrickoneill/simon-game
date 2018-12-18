@@ -69,5 +69,12 @@
 }
 
 #game-control {
-    position: center;
+    position: absolute;
+    margin: 70px 0px 0px 60px;
+}
+
+#title {
+    text-align: center;
+    text-decoration: underline;
+    
 }
