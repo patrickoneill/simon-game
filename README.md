@@ -1,18 +1,29 @@
+# Milestone 2 #
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+## - Simon Memory Game
+
+Play Here  Now - <a href="https://patrickoneill.github.io/simon-game/">Simon Game</a>
 
 
-Hi there! Welcome to Cloud9 IDE!
+Code Institute Project to create a memory game using 
 
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
+- HTML5
+- CSS
+- JavaScript / JQuery
 
-Happy coding!
-The Cloud9 IDE team
+The project is mainly used to show off the abillity of JavaScript
+
+### HTML5
+
+I've used the basic HTML code for the layout .
+Links for the CSS and Audio files are in the head of the index.html
+with there file paths to keep things neat. JS link at the bottom as per best 
+practice so that the page loads before the JS file.
+All section in the index.html have an ID so that they are easily targeted in 
+CSS & JS.
+
+### CSS
+
+The game components have been created by the CSS file. Using the # selector 
+for easy styling. Using border-radius , sizing and margin to place to pieces 
+together 
