@@ -36,11 +36,11 @@ power.addEventListener("click", (event) => {
     console.log("checked") // check if it is listening =)
     if (power.checked == true) {
         on = true;
-        counter.innerHTML = "-";
+        counter.innerHTML = "READY";
     }
     else {
         on = false;
-        counter.innerHTML = "-";
+        counter.innerHTML = "OFF";
         clearColor();
         clearInterval(intervalId);
     }
@@ -235,7 +235,7 @@ function flashColor() {
 
 function winGame() {
     flashColor();
-    counter.innerHTML = "Winner!";
+    counter.innerHTML = "Winner";
     on = false;
     win = true;
 }
