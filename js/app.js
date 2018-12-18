@@ -219,3 +219,23 @@ function check() {
     }
 }
 
+function clearColor() {
+    topL.style.backgroundColor = "darkgreen"
+    topR.style.backgroundColor = "darkred";
+    bottomR.style.backgroundColor = "darkblue";
+    bottomL.style.backgroundColor = "goldenrod";
+}
+
+function flashColor() {
+    topL.style.backgroundColor = "green"
+    topR.style.backgroundColor = "red";
+    bottomR.style.backgroundColor = "blue";
+    bottomL.style.backgroundColor = "yellow";
+}
+
+function winGame() {
+    flashColor();
+    counter.innerHTML = "Winner!";
+    on = false;
+    win = true;
+}
