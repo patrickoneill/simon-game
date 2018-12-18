@@ -180,3 +180,42 @@ bottomL.addEventListener("click", (event) => {
     }
 })
 
+function check() {
+    if(player[player.length - 1] !== order[player.length - 1]) 
+        correct = false;
+        
+    if(player.length == 20 && correct) {
+        winGame();
+    }
+    
+    if (correct == false) {
+        flashColor();
+        turn.innerHTML = "NO!"
+        setTimeout(() => {
+            turn.innerHTML = turn;
+            clearColor();
+            
+            if (diff) {
+                play();
+            }else {
+                cpu = true;
+                flash = 0;
+                player = [];
+                correct = true;
+                intervalId = setInterval(gameTurn, 800);
+            }
+        }, 800);
+        
+        noise = false;
+    }
+    
+    if ( turn == player.length && correct && !win) {
+        turn++;
+        player= [];
+        cpu = true;
+        flash = 0;
+        counter.innerHTML = turn;
+        intervalId = setInterval(gameTurn, 800)
+    }
+}
+
